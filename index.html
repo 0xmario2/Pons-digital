@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PONS DIGITAL — Your identity, .digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f2744;
+      --muted: #6b7c93;
+      --mint: #3cba8b;
+      --line: #e7eef5;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+    }
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px 20px 48px;
+    }
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+    .hero {
+      text-align: center;
+      margin-top: 56px;
+    }
+    .hero .mark {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+    .tag {
+      margin: 10px 0 0;
+      color: #8aa0b8;
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .claim {
+      margin-top: 36px;
+      background: #f4f7fb;
+      border-radius: 22px;
+      padding: 10px;
+    }
+    .field {
+      background: #fff;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      padding: 6px 8px 6px 16px;
+      border: 1px solid #edf2f7;
+    }
+    .field input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      font-size: 18px;
+      padding: 14px 0;
+      color: var(--navy);
+      background: transparent;
+    }
+    .field input::placeholder { color: #b7c3d1; }
+    .suffix {
+      color: var(--mint);
+      font-weight: 700;
+      font-size: 20px;
+      padding-right: 10px;
+    }
+    .hint {
+      text-align: center;
+      color: #8aa0b8;
+      margin: 18px 0 28px;
+      font-size: 15px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e8eef4;
+      border-radius: 22px;
+      padding: 22px 20px;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 16px;
+    }
+    button.soon {
+      margin-top: 14px;
+      width: 100%;
+      border: 0;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    footer {
+      margin-top: 28px;
+      text-align: center;
+    }
+    .xlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 16px;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img class="logo" src="https://i.ibb.co.com/v4D7T0f1/IMG-20261005-183102-546.jpg" alt="Pons Digital logo" />
+        <div>PONS<br>DIGITAL</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img class="mark" src="https://i.ibb.co.com/v4D7T0f1/IMG-20261005-183102-546.jpg" alt="P logo" />
+      <h1>PONS DIGITAL</h1>
+      <p class="tag">Your identity, .digital</p>
+    </section>
+
+    <form class="claim" onsubmit="return false;">
+      <div class="field">
+        <input id="name" type="text" placeholder="your name" autocomplete="off" />
+        <span class="suffix">.digital</span>
+      </div>
+    </form>
+    <p class="hint">Enter a name to claim on Robinhood Chain</p>
+
+    <article class="card">
+      <h2>IDENTITY LAYER</h2>
+      <p>One .digital name for wallet, DAO, and socials on Robinhood Chain.</p>
+    </article>
+
+    <article class="card">
+      <h2>Pons Family</h2>
+      <p>Part of Pons ecosystem. Not just a domain, your on-chain reputation.</p>
+    </article>
+
+    <article class="card">
+      <h2>MINT NOW</h2>
+      <p>Connect wallet coming soon. Claim early names before they’re taken.</p>
+      <button class="soon" type="button">Connect wallet — coming soon</button>
+    </article>
+
+    <footer>
+      <a class="xlink" href="https://x.com/Pons_digital" target="_blank" rel="noreferrer">𝕏 @Pons_digital</a>
+    </footer>
+  </div>
+
+  <script>
+    const input = document.getElementById("name");
+    input.addEventListener("input", () => {
+      input.value = input.value.toLowerCase().replace(/[^a-z0-9-]/g, "");
+    });
+  </script>
+</body>
+</html>
